@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "ds129484.mlab.com:29484/denunciadb",
+    "port": 29484,
+    "url": "mongodb://paul:paul123@ds129484.mlab.com:29484/denunciadb",
+    "database": "denunciadb",
+    "password": "paul123",
+    "name": "db",
+    "user": "paul",
+    "connector": "mongodb"
+  }
+}
