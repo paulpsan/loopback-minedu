@@ -1,0 +1,98 @@
+{
+  "name": "registro",
+  "plural": "registros",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombres": {
+      "type": "string"
+    },
+    "Apellidos": {
+      "type": "string"
+    },
+    "rude": {
+      "type": "string"
+    },
+    "fecha_nac": {
+      "type": "date"
+    },
+    "unidad_educativa": {
+      "type": "string"
+    },
+    "departamento": {
+      "type": "string"
+    },
+    "distrito": {
+      "type": "string"
+    },
+    "provincia": {
+      "type": "string"
+    },
+    "domicilio": {
+      "type": "string"
+    },
+    "temas_sociales": {
+      "type": {
+        "descripcion": "string",
+        "id": "string",
+        "titulo": "string"
+      }
+    },
+    "problematica": {
+      "type": "string"
+    },
+    "edad": {
+      "type": "string"
+    },
+    "nivel": {
+      "type": "string"
+    },
+    "grado": {
+      "type": "string"
+    },
+    "adaptacion": {
+      "type": "string"
+    },
+    "numero_licencia": {
+      "type": "string"
+    },
+    "licencia_pre_natal": {
+      "type": "string"
+    },
+    "detalle_pre_natal": {
+      "type": "string"
+    },
+    "licencia_post_parto": {
+      "type": "string"
+    },
+    "detalle_post_parto": {
+      "type": "string"
+    },
+    "desercion": {
+      "type": "string"
+    },
+    "numero_transferencia": {
+      "type": "string"
+    },
+    "fecha_creacion": {
+      "type": "date"
+    },
+    "fecha_modificacion": {
+      "type": "date"
+    },
+    "usuario":{
+      "type":{
+          "id": "string",
+          "nombre": "string",
+          "role":"string"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
