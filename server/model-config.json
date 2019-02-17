@@ -35,6 +35,13 @@
       "permission": "DENY"
     },
     {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": ["find","findById"]
+    },
+    {
       "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "admin",
