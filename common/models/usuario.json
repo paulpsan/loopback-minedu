@@ -22,7 +22,9 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "find"
+
     },
     {
       "accessType": "WRITE",
