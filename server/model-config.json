@@ -15,15 +15,7 @@
   },
   "User": {
     "dataSource": "db",
-    "public": true,
-    "acls": [
-      {
-        "principalType": "ROLE",
-        "principalId": "$everyone",
-        "permission": "ALLOW",
-        "property": "find"
-      }
-    ]
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -35,12 +27,41 @@
   },
   "RoleMapping": {
     "dataSource": "db",
-    "public": false,
-    "options": {
-      "strictObjectIDCoercion": true
+    "public": true,
+    "acls": [{
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": ["upsert","updateAttributes"]
     }
+  ]
   },
   "Role": {
+    "dataSource": "db",
+    "public": true,
+    "acls": [{
+        "accessType": "*",
+        "principalType": "ROLE",
+        "principalId": "$everyone",
+        "permission": "DENY"
+      },
+      {
+        "accessType": "READ",
+        "principalType": "ROLE",
+        "principalId": "admin",
+        "permission": "ALLOW",
+        "property": ["find","findById"]
+      }
+    ]
+  },
+  "usuario": {
     "dataSource": "db",
     "public": true
   },

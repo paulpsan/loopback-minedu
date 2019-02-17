@@ -83,16 +83,22 @@
     "fecha_modificacion": {
       "type": "date"
     },
-    "usuario":{
-      "type":{
-          "id": "string",
-          "nombre": "string",
-          "role":"string"
+    "Usuario": {
+      "type": {
+        "id": "string",
+        "nombre": "string",
+        "role": "string"
       }
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "usuario": {
+      "type": "belongsTo",
+      "model": "usuario",
+      "foreignKey": "ownerId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
