@@ -32,19 +32,19 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY"
+      "permission": "ALLOW"
     },
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "admin",
+      "principalId": "$everyone",
       "permission": "ALLOW",
       "property": ["find","findById"]
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "admin",
+      "principalId": "$everyone",
       "permission": "ALLOW",
       "property": ["upsert","updateAttributes"]
     }
@@ -57,7 +57,7 @@
         "accessType": "*",
         "principalType": "ROLE",
         "principalId": "$everyone",
-        "permission": "DENY"
+        "permission": "ALLOW"
       },
       {
         "accessType": "READ",
