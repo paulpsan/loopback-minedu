@@ -28,45 +28,30 @@
   "RoleMapping": {
     "dataSource": "db",
     "public": true,
-    "acls": [{
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW",
-      "property": ["find","findById"]
-    },
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW",
-      "property": ["upsert","updateAttributes"]
+    "relations": {
+      "usuario": {
+        "type": "belongsTo",
+        "model": "usuario",
+        "foreignKey": "principalId"
+      },
+      "role": {
+        "type": "belongsTo",
+        "model": "Role",
+        "foreignKey": "roleId"
+      }
     }
-  ]
   },
   "Role": {
     "dataSource": "db",
     "public": true,
-    "acls": [{
-        "accessType": "*",
-        "principalType": "ROLE",
-        "principalId": "$everyone",
-        "permission": "ALLOW"
-      },
-      {
-        "accessType": "READ",
-        "principalType": "ROLE",
-        "principalId": "admin",
-        "permission": "ALLOW",
-        "property": ["find","findById"]
+    "relations": {
+      "usuario": {
+        "type": "belongsTo",
+        "model": "usuario",
+        "foreignKey": "roleId",
+        "through": "RoleMapping"
       }
-    ]
+    }
   },
   "usuario": {
     "dataSource": "db",

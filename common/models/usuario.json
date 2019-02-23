@@ -11,10 +11,10 @@
       "foreignKey": "principalId",
       "through": "RoleMapping"
     },
-    "registro":{
-      "type":"hasMany",
-      "model":"registros",
-      "foreignKey":"ownerId"
+    "registros": {
+      "type": "hasMany",
+      "model": "registro",
+      "foreignKey": "ownerId"
     }
   },
   "acls": [
